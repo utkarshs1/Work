@@ -1,0 +1,181 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="styling.css">
+    <title>My Resume Generator</title>
+</head>
+
+<div>
+    <div class="container" id="cv-form">
+      <h1 class="text-center my-2"><b>Resume Generator</b></h1>
+      <p class="text-center my-2"></b>- By Utkarsh</b></p>
+        <div class="row">
+            <div class="col-md-3">
+                <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#list-item-1">Personal Information</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">Education</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-5">Technical Skills</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-3">Key Projects</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">Contact Details</a>
+                </div>
+            </div>
+            <div class="col" data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+                <div class="row mt-4 mb-4">
+                    <!-- first col -->
+                    <h3 id="list-item-1">PERSONAL INFORMATION</h3>
+                    <div class="form-group mt-2">
+                        <label for="nameField">Full Name :</label>
+                        <input type="text" id="nameField" placeholder="Enter here" class="form-control" />
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">Photo ( Required ) :</label>
+                        <input id="imgField" type="file" class="form-control" />
+                    </div>                    
+                </div>
+                <div class="row mb-4">
+                    <!-- second -->
+                    <h3 id="list-item-2">EDUCATION</h3>
+                    <div class="form-group mt-3">
+                        <label for="nameField">College / University :</label>
+                        <input id="collegeField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Degree :</label>
+                        <input id="courseField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Department :</label>
+                        <input id="departmentField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <!-- second -->
+                    <h3 id="list-item-5">TECHNICAL SKILLS</h3>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Programming Languages :</label>
+                        <input id="languageField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Utilities :</label>
+                        <input id="toolField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Area(s) of Intersest :</label>
+                        <input id="areaField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <!-- second -->
+                    <h3 id="list-item-3">KEY PROJECTS</h3>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Name :</label>
+                        <input id="projectNameField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Objective :</label>
+                        <input id="projectAboutField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Impact :</label>
+                        <input id="projectExposureField" placeholder="Enter here" class="form-control" rows="3"></input>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <h3 id="list-item-4">CONTACT DETAILS</h3>
+                    <div class="form-group mt-3">
+                        <label for="nameField ">Contact Number :</label>
+                        <input type="text" id="contactField" placeholder="Enter here" class="form-control" />
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField">Email Address :</label>
+                        <input type="email" id="addressField" placeholder="Enter here" class="form-control" rows="4" ></input>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField ">LinkedIn URL :</label>
+                        <input type="text" id="linkedField" placeholder="Enter here" class="form-control" />
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="nameField ">Instagram URL :</label>
+                        <input type="text" id="instaField" placeholder="Enter here" class="form-control" />
+                    </div>
+                    <div class="form-group mt-3">
+                      <label for="nameField ">Github URL :</label>
+                        <input type="text" id="githubField" placeholder="Enter here" class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mb-4">
+            <button onclick="resumeBuild()" class="btn btn-primary btn-lg mt-3">Generate Resume</button>
+        </div>  
+    </div>
+
+    <div class="main-container" id="cv-template">
+        <div class="row resume">
+            <div class="col-md-3 text-center left">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxLM_42Ozhu-L0ojQtA1vvA0riCPDFZqL1xzaud9sU9xTg1VVh30jlFJRqagA0QZv_qp8&usqp=CAU" alt="" class="img-fluid img-container" id="imgT" />
+                <h2 id="nameT" class="text-center"></h2>
+                <p id="contactT"></p>
+                <p id="addressT"></p>
+                <div class="container"> 
+                     <!-- To Do  -->
+                    <!-- <a id="githubT"><i class="fa fa-github"></i></a>
+                    <a id="linkedT"><i class="fa fa-linkedin"></i></a>
+                    <a id="instaT"><i class="fa fa-instagram"></i></a> -->
+                </div>
+            </div>
+            <div class="col right">
+                <div class="card mt-4">
+                    <div class="card-header heading">
+                        <h4>Education</h4>
+                    </div>
+                    <div class="card-body">
+                        <p id="collegeT" class="head"></p>
+                        <p class="sub-head"><span id="courseT"></span> in <span id="departmentT"></span></p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header heading">
+                        <h4>Technical Skills</h4>
+                    </div>
+                    <div class="card-body">
+                        <p><span class="highlight">Programming Languages : </span> <span id="languageT"></span></p>
+                        <p><span class="highlight">Utilities : </span> <span id="toolT"></span></p>
+                        <p><span class="highlight">Area(s) of Interest : </span> <span id="areaT"></span></p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header heading">
+                        <h4>Key Projects</h4>
+                    </div>
+                    <div class="card-body">
+                        <p id="projectNameT" class="head"></p>
+                        <p id="projectAboutT" class="sub-head"></p>
+                        <p><span class="highlight">Impact : </span> <span id="projectExposureT"></span></p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="container mt-3 mb-3 text-center">
+            <button onclick="resumePrint()" class="btn btn-primary btn-lg">Download</button>
+            <button onclick="goBack()" class="btn btn-primary btn-lg">Back</button>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="dynamic.js"></script>
+
+</body>
+
+</html>
